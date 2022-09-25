@@ -13,8 +13,8 @@ public class Sample {
 
     static final String product = "Dysmsapi";
     static final String domain = "dysmsapi.aliyuncs.com";
-    static final String accessKeyId ="LTAI5tQ14TzCTbwthBnGEdps";
-    static final String accessKeySecret = "ZN7yLmtCO9kn2AJF1osuUVrGfvqwpg";
+    static final String accessKeyId ="************";
+    static final String accessKeySecret = "*****************";
 
     public static SendSmsResponse sendSmsResponse(String phone, String code) throws ClientException {
         System.setProperty("sun.net.client.defaultConnectTimeout","10000");
