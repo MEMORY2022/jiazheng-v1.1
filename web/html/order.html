@@ -1,0 +1,237 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>预定服务</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.css">
+	<!--导航处城市切换插件-->
+	<link rel="stylesheet" href="../css/cityPicker.css">
+	<!--下拉处城市切换插件-->
+	<link rel="stylesheet" href="../css/city-picker.css">
+	<!--分页-->
+	<link rel="stylesheet" href="../css/pagination.css" />
+	<script src="../js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$(".top-nav").load("top_nav.jsp");
+			$(".header").load("header.jsp");
+			$(".footer").load("footer.jsp");
+			$(".fix-service").load("fix_service.jsp");
+		});
+	</script>
+</head>
+
+<body>
+<div class="top-nav">
+</div>
+
+<div class="header">
+</div>
+<div class="section-order">
+	<div class="container">
+		<span class="order-note"></span>
+		<span class="order-text"></span>
+	</div>
+</div>
+<div class="section-mian order-mian">
+	<div class="container">
+		<div class="order-box">
+			<div class="order-fill col-md-4">
+				<div class="fill-hd">
+					<p>服务人员:<span class="employee-name">何美琴（保姆）</span></p>
+					<p>服务价格:<span class="employee-wage">3000.0</span>元/月</p>
+				</div>
+				<ul class="fill-bd condition-choose">
+					<li class="fill-item">
+						<p class="tit">服务时间</p>
+						<input class="time-input input" placeholder="" readonly  type="text" value="请选择服务时间" />
+					</li>
+					<li class="fill-item">
+						<p class="tit">面试方式</p>
+						<select class="base-select">
+							<option value="">==选择面试方式==</option>
+							<option value="上门面试">上门面试</option>
+							<option value="运营中心面试">运营中心面试</option>
+							<option value="视频面试">视频面试</option>
+							<option value="电话面试">电话面试</option>
+						</select>
+					</li>
+					<li class="fill-item">
+						<p class="tit">付款方式</p>
+						<select class="base-select">
+							<option value="">==选择付款方式==</option>
+							<option value="账户余额支付">账户余额支付</option>
+							<option value="支付宝">支付宝</option>
+							<option value="微信支付">微信支付</option>
+						</select>
+					</li>
+					<li class="fill-item">
+						<p class="tit">服务地址</p>
+						<input type="text" class="input service-address" placeholder="请填写服务地址"/>
+					</li>
+					<li class="fill-item">
+						<p class="tit">备注</p>
+						<input type="text" class="remark input" placeholder="备注更多需求"/>
+					</li>
+					<li class="fill-item">
+						<div class="clause">
+							<input type="checkbox" class="choose-input" name="clause" value="1">
+							<label for="1">是否同意代发工资</label>
+							<span  data-method="confirmTransB" class="down-arrow down-btn1 alert-btn"></span>
+						</div>
+					</li>
+					<li class="fill-item">
+						<div class="clause">
+							<input type="checkbox" class="choose-input" name="clause" value="2">
+							<label for="2">购买家政综合险</label>
+							<span  data-method="confirmTransC" class="down-arrow down-btn1 alert-btn"></span>
+						</div>
+					</li>
+					<li class="fill-item">
+						<div class="clause">
+							<input type="checkbox" class="choose-input" name="clause" value="3">
+							<label for="3">支付保证金</label>
+							<span  data-method="confirmTransD" class="down-arrow down-btn1 alert-btn"></span>
+						</div>
+					</li>
+				</ul>
+				<div class="service-clause">
+					<p>我已阅读并同意<i>《服务条款》</i></p>
+					<button  data-method="confirmTransA" class="alert-btn">确认</button>
+				</div>
+			</div>
+			<div class="order-pic col-md-8">
+				<div class="pic-text">
+					<h1 class="service-project">家电清洗</h1>
+					<div class="spilt-line"></div>
+					<ul class="service-wrap">
+						<li>
+							<div class="service-tit">
+								<span class="small-title">说明</span>
+								<span class="bedeck"></span>
+								<div class="clearfix"></div>
+							</div>
+							<p class="service-cont">家电清洗即对家用电器进行清洁保养，以增加家电运作效率以及延长其使用寿命，使人们更好的利用家电，保持家庭清洁，人们心情愉快生活更健康。家电清洗包括：饮水机、油烟机、空调、电磁炉、电冰箱、电脑、电视等一些经常使用的家用电器清洗。不同的家电清洗方法不同具体的标准也不同。</p>
+						</li>
+						<li>
+							<div class="service-tit">
+								<span class="small-title">空调</span>
+								<span class="bedeck"></span>
+								<div class="clearfix"></div>
+							</div>
+							<p class="service-cont">家电清洗即对家用电器进行清洁保养，以增加家电运作效率以及延长其使用寿命，使人们更好的利用家电，保持家庭清洁，人们心情愉快生活更健康。家电清洗包括：饮水机、油烟机、空调、电磁炉、电冰箱、电脑、电视等一些经常使用的家用电器清洗。不同的家电清洗方法不同具体的标准也不同。</p>
+						</li>
+						<li>
+							<div class="service-tit">
+								<span class="small-title">油烟机</span>
+								<span class="bedeck"></span>
+								<div class="clearfix"></div>
+							</div>
+							<p class="service-cont">家电清洗即对家用电器进行清洁保养，以增加家电运作效率以及延长其使用寿命，使人们更好的利用家电，保持家庭清洁，人们心情愉快生活更健康。家电清洗包括：饮水机、油烟机、空调、电磁炉、电冰箱、电脑、电视等一些经常使用的家用电器清洗。不同的家电清洗方法不同具体的标准也不同。</p>
+						</li>
+						<li>
+							<div class="service-tit">
+								<span class="small-title">洗衣机</span>
+								<span class="bedeck"></span>
+								<div class="clearfix"></div>
+							</div>
+							<p class="service-cont">家电清洗即对家用电器进行清洁保养，以增加家电运作效率以及延长其使用寿命，使人们更好的利用家电，保持家庭清洁，人们心情愉快生活更健康。家电清洗包括：饮水机、油烟机、空调、电磁炉、电冰箱、电脑、电视等一些经常使用的家用电器清洗。不同的家电清洗方法不同具体的标准也不同。</p>
+						</li>
+						<li>
+							<div class="service-tit">
+								<span class="small-title">热水器</span>
+								<span class="bedeck"></span>
+								<div class="clearfix"></div>
+							</div>
+							<p class="service-cont">家电清洗即对家用电器进行清洁保养，以增加家电运作效率以及延长其使用寿命，使人们更好的利用家电，保持家庭清洁，人们心情愉快生活更健康。家电清洗包括：饮水机、油烟机、空调、电磁炉、电冰箱、电脑、电视等一些经常使用的家用电器清洗。不同的家电清洗方法不同具体的标准也不同。</p>
+						<li>
+							<div class="service-tit">
+								<span class="small-title">冰箱</span>
+								<span class="bedeck"></span>
+								<div class="clearfix"></div>
+							</div>
+							<p class="service-cont">家电清洗即对家用电器进行清洁保养，以增加家电运作效率以及延长其使用寿命，使人们更好的利用家电，保持家庭清洁，人们心情愉快生活更健康。家电清洗包括：饮水机、油烟机、空调、电磁炉、电冰箱、电脑、电视等一些经常使用的家用电器清洗。不同的家电清洗方法不同具体的标准也不同。</p>
+						<li>
+							<div class="service-tit">
+								<span class="small-title">电脑</span>
+								<span class="bedeck"></span>
+								<div class="clearfix"></div>
+							</div>
+							<p class="service-cont">家电清洗即对家用电器进行清洁保养，以增加家电运作效率以及延长其使用寿命，使人们更好的利用家电，保持家庭清洁，人们心情愉快生活更健康。家电清洗包括：饮水机、油烟机、空调、电磁炉、电冰箱、电脑、电视等一些经常使用的家用电器清洗。不同的家电清洗方法不同具体的标准也不同。</p>
+						</li>
+						</li>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="pay-alert">
+	<p>余额不足，请选择其他支付方式</p>
+</div>
+<div id="payroll-credit">
+	<img src="img/other/wage.jpg" alt="代发工资说明">
+</div>
+<div id="insurance">
+	<img src="img/other/insurance.jpg" alt="家政综合险">
+</div>
+<div id="margin">
+	<img src="img/other/margin.jpg" alt="保证金">
+</div>
+<div class="footer">
+</div>
+<p class="address">福建省家政平台网络科技股份有限公司　-　家政综合信息服务平台</p>
+<div class="fix-service">
+</div>
+<script src="js/bootstrap.min.js"></script>
+<!--导航城市选择-->
+<script src="../js/cityData.js"></script>
+<script src="../js/cityPicker.js"></script>
+<!--下拉城市选择-->
+<script src="../js/city-picker.data.js"></script>
+<script src="../js/city-picker.js"></script>
+<!--分页-->
+<script src="../js/jquery.pagination.js"></script>
+<!--日期插件-->
+
+<script>
+	$(".search-input li").hide().first().show();
+	$(document).ready(function(e) {
+		$(".nav-more").click(function(){
+			$(".hide-nav").slideToggle();
+		});
+		$(".drop-menu").click(function(){
+			$(".header-nav").slideToggle();
+		});
+		$(".three li").click(function(){
+			$(this).addClass("current").siblings().removeClass("current");
+			$(".search-input li").hide().eq($(this).index()).show();
+		});
+		//返回顶部
+		$(".top-item").click(function(){
+			$('body,html').animate({ scrollTop: 0 }, 500);
+			return false;
+		});
+	});
+</script>
+<script>
+	var cityPicker = new IIInsomniaCityPicker({
+		data: cityData,
+		target: '#cityChoice',
+		valType: 'k-v',
+		hideCityInput: '#city',
+		hideProvinceInput: '#province',
+		callback: function(city_id){
+		}
+	});
+	cityPicker.init();
+</script>
+
+</body>
+</html>

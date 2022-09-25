@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>家政平台-人员信息</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.css">
+		<!--城市切换插件-->
+		<link rel="stylesheet" href="../css/cityPicker.css">
+
+		<script src="../js/jquery-2.0.0.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/cityData.js"></script>
+		<script src="../js/cityPicker.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$(".top-nav").load("top_nav.jsp");
+				$(".header").load("header.jsp");
+				$(".footer").load("footer.jsp");
+				$(".fix-service").load("fix_service.jsp");
+			});
+		</script>
+</head>
+
+<body>
+	<div class="top-nav">
+	</div>
+
+	<div class="header">
+	</div>
+	<div class="section-message">
+		<div class="container">
+			<div class="row">
+				<div class="message-wrap">
+				<div class="message-left col-md-3">
+					<div class="employee-image">
+						<img src="../img/other/team03.jpg" class="img-thumbnail" alt=""/>
+						<div class="title">李冬兰<i>(保姆)</i></div>
+						<p class="wage"><span>1800.0元/月</span><span>信用值：300</span></p>
+						<a href="order.html" class="book-employee"><span class="fa fa-comments-o"></span>预约</a>
+						<button class="book-employee alert-btn"  data-method="confirmTransI"><span class="fa fa-play-circle-o"></span>风采展示</button>
+					</div>
+				</div>
+				<div class="message-right col-md-9">
+					<div class="employee-pieces">
+						<h4>人员信息</h4>
+						<ul class="employee-detail">
+							<li>姓名</li>
+							<li>李冬兰</li>
+							<li>性別</li>
+							<li>女</li>
+							<li>电话号码</li>
+							<li>158*****286</li>
+							<li>责任老师</li>
+							<li>庄凤英</li>
+							<li>责任电话</li>
+							<li>13328682050</li>
+							<li>是否住家</li>
+							<li>不住家</li>
+							<li>工作时间</li>
+							<li>全天</li>
+							<li>年龄</li>
+							<li>40</li>
+							<li>等级</li>
+							<li>1</li>
+							<li>身份证号</li>
+							<li>3606*****929</li>
+							<li>籍貫</li>
+							<li>江西</li>
+							<li>文化程度</li>
+							<li>初中</li>
+							<li >年龄</li>
+							<li>40</li>
+							<li>工作年限</li>
+							<li>6年</li>
+							<li>居住地址</li>
+							<li class="chang-li">茶会新村</li>
+							<li>能力特长</li>
+							<li class="chang-li">做家务</li>
+							<li>责任老师评价</li>
+							<li class="chang-li">朴实、做事麻利、实在、厨艺好、卫生干净</li>
+						</ul>
+						<h4>认证情况</h4>
+						<ul class="approve-info">
+							<li class="col-sm-4"><span class="fa fa-id-card-o"></span>身份已认证</li>
+							<li class="col-sm-4"><span class="fa fa-hand-rock-o"></span>健康已认证</li>
+							<li class="col-sm-4"><span class="fa fa-thumbs-o-up"></span>技能未认证</li>
+						</ul>
+						<h4>用户评价</h4>
+						<p class="user-appraisal">暂无用户评价</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+	</div>
+	<p class="address">福建省家政平台网络科技股份有限公司　-　家政综合信息服务平台</p>
+	<div class="fix-service">
+	</div>
+	<div id="video">
+		<p>该员工未上传视频！</p>
+	</div>
+
+ 
+	<script>
+	$(".search-input li").hide().first().show();
+	$(document).ready(function(e) {
+		$(".nav-more").click(function(){
+			$(".hide-nav").slideToggle();	
+		});
+		$(".drop-menu").click(function(){
+			$(".header-nav").slideToggle();	
+		});
+		$(".three li").click(function(){
+			$(this).addClass("current").siblings().removeClass("current");
+			$(".search-input li").hide().eq($(this).index()).show();
+		});
+		//返回顶部
+		$(".top-item").click(function(){
+			$('body,html').animate({ scrollTop: 0 }, 500);
+			return false;
+		});
+	});
+	</script>
+	<script>
+		var cityPicker = new IIInsomniaCityPicker({
+			data: cityData,
+			target: '#cityChoice',
+			valType: 'k-v',
+			hideCityInput: '#city',
+			hideProvinceInput: '#province',
+			callback: function(city_id){
+			}
+		});
+		cityPicker.init();
+	</script>
+	 
+</body>
+</html>

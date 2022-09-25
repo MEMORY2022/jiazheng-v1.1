@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>家政平台-新闻中心</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.css">
+		<!--导航处城市切换插件-->
+		<link rel="stylesheet" href="../css/cityPicker.css">
+		<!--分页-->
+		<link rel="stylesheet" href="../css/pagination.css" />
+
+		<script src="../js/jquery-2.0.0.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<!--导航城市选择-->
+		<script src="../js/cityData.js"></script>
+		<script src="../js/cityPicker.js"></script>
+		<!--分页-->
+		<script src="../js/jquery.pagination.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$(".top-nav").load("top_nav.jsp");
+				$(".header").load("header.jsp");
+				$(".footer").load("footer.jsp");
+				$(".fix-service").load("fix_service.jsp");
+
+			});
+		</script>
+</head>
+
+<body>
+	<div class="top-nav">
+	</div>
+
+	<div class="header">
+	</div>
+	<div class="section-banner">
+		<img src="../img/other/news_bj.jpg" alt=""/>
+	</div>
+	<div class="news-center">
+		<div class="container">
+			<div class="news-wrap">
+				<div class="news-item">
+					<h3>这是新闻的标题这是新闻的标题</h3>
+					<p class="news-time"><span>来源：968金网月子中心</span><span>阅读量：14</span><i>更新时间：2017-07-09 16:31:11</i></p>
+					<p class="news-cont"> 然而这还不是最重要的，更要命的是，第一次生孩子，不知道要怎么处理各种问题。。于是很多妈妈可能会四处向前辈们取经，或网上查资料寻找更多方式来防患于未然......</p>
+					<a href="news_detail.html" class="news-detail">查看全文<i class="fa fa-angle-double-right"></i></a>
+					<span class="gray-piece"></span>
+					<span class="block-line"></span>
+					<span class="green-piece"></span>
+				</div>
+				<div class="news-margin"></div>
+				<div class="news-item">
+					<h3>这是新闻的标题这是新闻的标题</h3>
+					<p class="news-time"><span>来源：968金网月子中心</span><span>阅读量：14</span><i>更新时间：2017-07-09 16:31:11</i></p>
+					<p class="news-cont"> 然而这还不是最重要的，更要命的是，第一次生孩子，不知道要怎么处理各种问题。。于是很多妈妈可能会四处向前辈们取经，或网上查资料寻找更多方式来防患于未然......</p>
+					<a href="news_detail.html" class="news-detail">查看全文<i class="fa fa-angle-double-right"></i></a>
+					<span class="gray-piece"></span>
+					<span class="block-line"></span>
+					<span class="green-piece"></span>
+				</div>
+				<div class="news-margin"></div>
+				<div class="news-item">
+					<h3>这是新闻的标题这是新闻的标题</h3>
+					<p class="news-time"><span>来源：968金网月子中心</span><span>阅读量：14</span><i>更新时间：2017-07-09 16:31:11</i></p>
+					<p class="news-cont"> 然而这还不是最重要的，更要命的是，第一次生孩子，不知道要怎么处理各种问题。。于是很多妈妈可能会四处向前辈们取经，或网上查资料寻找更多方式来防患于未然......</p>
+					<a href="news_detail.html" class="news-detail">查看全文<i class="fa fa-angle-double-right"></i></a>
+					<span class="gray-piece"></span>
+					<span class="block-line"></span>
+					<span class="green-piece"></span>
+				</div>
+			</div>
+			<div class="center-box">
+				<div class="M-box2"></div>
+			</div>	
+		</div>
+	</div>
+	<div class="footer">
+	</div>
+	<p class="address">福建省家政平台网络科技股份有限公司　-　家政综合信息服务平台</p>
+	<div class="fix-service">
+	</div>
+	<script>
+	$(".search-input li").hide().first().show();
+	$(document).ready(function(e) {
+		$(".nav-more").click(function(){
+			$(".hide-nav").slideToggle();	
+		});
+		$(".drop-menu").click(function(){
+			$(".header-nav").slideToggle();	
+		});
+		$(".three li").click(function(){
+			$(this).addClass("current").siblings().removeClass("current");
+			$(".search-input li").hide().eq($(this).index()).show();
+		});
+		//返回顶部
+		$(".top-item").click(function(){
+			$('body,html').animate({ scrollTop: 0 }, 500);
+			return false;
+		});
+	});
+	</script>
+	<script>
+		var cityPicker = new IIInsomniaCityPicker({
+			data: cityData,
+			target: '#cityChoice',
+			valType: 'k-v',
+			hideCityInput: '#city',
+			hideProvinceInput: '#province',
+			callback: function(city_id){
+			}
+		});
+		cityPicker.init();
+	</script>
+	<script>
+		$(function(){
+			$('.M-box').pagination({
+				callback:function(api){
+					$('.now').text(api.getCurrent());
+				}
+			},function(api){
+				$('.now').text(api.getCurrent());
+			});
+	
+			$('.M-box2').pagination({
+				coping:true,
+				homePage:'首页',
+				endPage:'末页',
+				prevContent:'上页',
+				nextContent:'下页'
+			});
+		});
+	</script> 
+</body>
+</html>

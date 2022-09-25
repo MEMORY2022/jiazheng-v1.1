@@ -1,0 +1,249 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>家政平台-月嫂</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.css">
+		<!--导航处城市切换插件-->
+		<link rel="stylesheet" href="../css/cityPicker.css">
+		<!--下拉处城市切换插件-->
+		<link rel="stylesheet" href="../css/city-picker.css">
+		<!--分页-->
+		<link rel="stylesheet" href="../css/pagination.css" />
+
+		<script src="../js/jquery-2.0.0.min.js"></script>
+		<script src="../js/owl.carousel.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/jquery.touchSwipe.min.js"></script>
+		<script src="../js/bootstrap-touch-slider.js"></script>
+		<script src="../js/wow.min.js"></script>
+		<script src="../js/cityData.js"></script>
+		<script src="../js/cityPicker.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$(".top-nav").load("top_nav.jsp");
+				$(".header").load("header.jsp");
+				$(".footer").load("footer.jsp");
+				$(".fix-service").load("fix_service.jsp");
+			});
+		</script>
+		 
+</head>
+
+<body>
+	<div class="top-nav">
+		<!---->
+	</div>
+
+	<div class="header">
+		<!---->
+	</div>
+	<div class="section-banner">
+		<img src="../img/other/yuesao_bj.jpg" alt=""/>
+	</div>
+	<div class="section-mian">
+		<div class="container">
+			<h4>以下数据更新于48小时前，如有变动请以客服为准。谢谢！</h4>
+			<div class="choose-select">
+				<ul class="condition-choose">
+					<li class="col-md-4">
+						<span class="skill-tit">地点:</span>
+						<div id="distpicker">
+							<input id="city-picker3" class="form-control input" readonly type="text" value="" data-toggle="city-picker">
+						</div>
+						<span class="fa fa-angle-down down"></span>
+						<div class="clearfix"></div>
+					</li>
+					<li class="col-md-4">
+						<span class="skill-tit">时间:</span>
+					  	<input class="time-input input" placeholder="" type="text" value="请选择服务时间"  >
+						<span class="fa fa-angle-down down"></span>
+					</li>
+					<li class="col-md-4">
+						<span class="skill-tit">能力:</span>
+						<select class="base-select">
+							<option value="">==请选择==</option>
+							<option value="做家务">做家务</option>
+							<option value="辅助带孩子">辅助带孩子</option>
+							<option value="全职带孩子">全职带孩子</option>
+							<option value="照顾半自理老人">照顾半自理老人</option>
+							<option value="照顾不能自理老人">照顾不能自理老人</option>
+							<option value="照顾病人">照顾病人</option>
+							<option value="饲养宠物">饲养宠物</option>
+							<option value="公司做饭">公司做饭</option>
+						</select>
+						<span class="fa fa-angle-down down"></span>
+					</li>
+					<li class="col-md-4">
+						<span class="skill-tit">薪资:</span>
+						<select class="base-select">
+							<option value="">==请选择==</option>
+							<option value="不限">不限</option>
+							<option value="1500-300元/月">1500-300元/月</option>
+							<option value="3000-4500/月">3000-4500/月</option>
+							<option value="4500-6500/月">4500-6500/月</option>
+							<option value="6500-8000/月">6500-8000/月</option>
+							<option value="8000元以上">8000元以上</option>
+						</select>
+						<span class="fa fa-angle-down down"></span>
+					</li>
+					<li class="col-md-4">
+						<span class="skill-tit">年龄:</span>
+						<select class="base-select">
+							<option value="">==请选择==</option>
+							<option value="不限">不限</option>
+							<option value="20-29岁">20-29岁</option>
+							<option value="30-39岁">30-39岁</option>
+							<option value="40-49岁">40-49岁</option>
+							<option value="50岁以上">50岁以上</option>
+						</select>
+						<span class="fa fa-angle-down down"></span>
+					</li>
+					<li class="col-md-4">
+						<span class="skill-tit">排序:</span>
+						<select class="base-select">
+							<option value="">==请选择==</option>
+							<option value="不限">等级升序</option>
+							<option value="等级降序">等级降序</option>
+							<option value="信用值升序">信用值升序</option>
+							<option value="信用值降岁">信用值降序</option>
+							<option value="更新时间升序">更新时间升序</option>
+							<option value="更新时间降序">更新时间降序</option>
+						</select>
+						<span class="fa fa-angle-down down"></span>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+				<div class="choose-confirm">
+					<div class="container">
+						<button class="choose-btn">确认</button>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="person-info">
+				<ul class="person-list">
+					<li class="person-item col-md-4">
+						<a href="book_info.html" class="person-link">
+							<img src="../img/other/yuesao_1.jpg" alt=""/>
+							<dl>
+								<dt class="user-name">周伟</dt>
+								<dd>薪资：3000元/月</dd>
+								<dd class="state">状态：忙碌</dd>
+								<dd>等级：1</dd>
+								<dd>好评率：0%</dd>
+								<dd>年龄：48岁</dd>
+								<dd>籍贯：福建</dd>
+								<dd>工作经验：2年</dd>
+								<dd>信用值：300</dd>
+								<dd class="last-child">能力：做家务、照顾能自理的老人</dd>
+							</dl>
+						</a>
+					</li>
+					<li class="person-item col-md-4">
+						<a href="book_info.html" class="person-link">
+							<img src="../img/other/yuesao_2.jpg" alt=""/>
+							<dl>
+								<dt class="user-name">练德凤</dt>
+								<dd>薪资：3000元/月</dd>
+								<dd class="state">状态：空闲</dd>
+								<dd>等级：1</dd>
+								<dd>好评率：0%</dd>
+								<dd>年龄：48岁</dd>
+								<dd>籍贯：福建</dd>
+								<dd>工作经验：2年</dd>
+								<dd>信用值：300</dd>
+								<dd class="last-child">能力：做家务、照顾能自理的老人</dd>
+							</dl>
+						</a>
+					</li>
+					<li class="person-item col-md-4">
+						<a href="book_info.html" class="person-link">
+							<img src="../img/other/yuesao_3.jpg" alt=""/>
+							<dl>
+								<dt class="user-name">周伟</dt>
+								<dd>薪资：3000元/月</dd>
+								<dd class="state">状态：工作中</dd>
+								<dd>等级：1</dd>
+								<dd>好评率：0%</dd>
+								<dd>年龄：48岁</dd>
+								<dd>籍贯：福建</dd>
+								<dd>工作经验：2年</dd>
+								<dd>信用值：300</dd>
+								<dd class="last-child">能力：做家务、照顾能自理的老人</dd>
+							</dl>
+						</a>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
+			<div class="center-box">
+				<div class="M-box2"></div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+	</div>
+	<p class="address">福建省家政平台网络科技股份有限公司　-　家政综合信息服务平台</p>
+	<div class="fix-service">
+	</div>
+ 
+	<script>
+	$(".search-input li").hide().first().show();
+	$(document).ready(function(e) {
+		$(".nav-more").click(function(){
+			$(".hide-nav").slideToggle();	
+		});
+		$(".drop-menu").click(function(){
+			$(".header-nav").slideToggle();	
+		});
+		$(".three li").click(function(){
+			$(this).addClass("current").siblings().removeClass("current");
+			$(".search-input li").hide().eq($(this).index()).show();
+		});
+		//返回顶部
+		$(".top-item").click(function(){
+			$('body,html').animate({ scrollTop: 0 }, 500);
+			return false;
+		});
+	});
+	</script>
+	<script>
+		var cityPicker = new IIInsomniaCityPicker({
+			data: cityData,
+			target: '#cityChoice',
+			valType: 'k-v',
+			hideCityInput: '#city',
+			hideProvinceInput: '#province',
+			callback: function(city_id){
+			}
+		});
+		cityPicker.init();
+	</script>
+	<script>
+		$(function(){
+			$('.M-box').pagination({
+				callback:function(api){
+					$('.now').text(api.getCurrent());
+				}
+			},function(api){
+				$('.now').text(api.getCurrent());
+			});
+	
+			$('.M-box2').pagination({
+				coping:true,
+				homePage:'首页',
+				endPage:'末页',
+				prevContent:'上页',
+				nextContent:'下页'
+			});
+		});
+	</script> 
+ 
+</body>
+</html>

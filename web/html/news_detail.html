@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>家政平台-新闻详情</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.css">
+		<!--导航处城市切换插件-->
+		<link rel="stylesheet" href="../css/cityPicker.css">
+
+		<script src="../js/jquery-2.0.0.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<!--导航城市选择-->
+		<script src="../js/cityData.js"></script>
+		<script src="../js/cityPicker.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$(".top-nav").load("top_nav.jsp");
+				$(".header").load("header.jsp");
+				$(".footer").load("footer.jsp");
+				$(".fix-service").load("fix_service.jsp");
+
+			});
+		</script>
+</head>
+
+<body>
+	<div class="top-nav">
+	</div>
+
+	<div class="header">
+	</div>
+	<div class="section-banner">
+		<img src="../img/other/news_bj.jpg" alt=""/>
+	</div>
+	<div class="section-detail">
+		<div class="container">
+			<div class="detail-wrap">
+				<h3>粽子美味，五类人不宜多食</h3>
+				<p class="news-time"><span>来源：968金网月子中心</span><span>阅读量：14</span><i>更新时间：2017-07-09 16:31:11</i></p>
+				<div class="text">
+					<img src="../img/other/news-detail.jpg" alt=""/>
+					<p class="indent-2">随着农历五月初五端午节的临近，各种各样的粽子吸引着人们，肉馅、水果馅、果酱馅、枣馅、栗子馅等等琳琅满目，让人不知吃哪种才好，也不知道吃多少才够。其实吃粽子也有很多讲究，和日常健康息息相关。</p>
+					<p class="indent-2">粽子大都是用糯米做成的，黏度高、不易消化，且缺乏纤维质，含过多的脂肪、盐、糖。例如一个普通的咸肉粽子，含米量约一至一碗半的饭，热量约为400~500卡路里。因此，专家建议，吃粽子，女性一天最好不要超过3个，男性最好不要超过5个。吃粽子的同时，搭配蔬菜、水果可帮助肠、胃蠕动，而且可以避免因吃粽子引起的肠、胃道消化不良。此外，睡前两小时最好别吃粽子，不要碰含水分很多的寒性瓜果类，比如西瓜，以免造成腹泻或腹痛。</p>
+					<p class="indent-2">除此之外，专家还建议一些人除了少吃以外，最好是别吃粽子。</p>
+					<p class="indent-2">心血管病患者：粽子的品种繁多，其中肉粽子和猪油豆沙粽子所含脂肪多，属油腻食品。患有高血压、高血脂、冠心病的人吃多了，可增加血液黏稠度，影响血液循环，加重心脏负担和缺血程度，诱发心绞痛和心肌梗死。</p>
+					<p class="indent-2">老人和儿童：粽子多用糯米制成，黏性大，老人和儿童如过量进食，极易造成消化不良，以及由此产生胃酸过多、腹胀、腹痛、腹泻等症状。</p>
+					<p class="indent-2">胃、肠道病患者：粽子蒸熟后会释放出一种胶性物质，吃后会增加消化酶的负荷。</p>
+					<p class="indent-2">糖尿病患者：粽子中常有含糖量很高的红枣、豆沙等，吃时通常还要加糖拌和，如果不加节制，就会损害胰岛功能，引起患者血糖和尿糖迅速上升，加重病情，甚至出现昏迷、中毒。</p>
+					<a href="news.html" class="back-news">返回新闻中心</a>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+	</div>
+	<p class="address">福建省家政平台网络科技股份有限公司　-　家政综合信息服务平台</p>
+	<div class="fix-service">
+	</div>
+	<script>
+	$(".search-input li").hide().first().show();
+	$(document).ready(function(e) {
+		$(".nav-more").click(function(){
+			$(".hide-nav").slideToggle();	
+		});
+		$(".drop-menu").click(function(){
+			$(".header-nav").slideToggle();	
+		});
+		$(".three li").click(function(){
+			$(this).addClass("current").siblings().removeClass("current");
+			$(".search-input li").hide().eq($(this).index()).show();
+		});
+		//返回顶部
+		$(".top-item").click(function(){
+			$('body,html').animate({ scrollTop: 0 }, 500);
+			return false;
+		});
+	});
+	</script>
+	<script>
+		var cityPicker = new IIInsomniaCityPicker({
+			data: cityData,
+			target: '#cityChoice',
+			valType: 'k-v',
+			hideCityInput: '#city',
+			hideProvinceInput: '#province',
+			callback: function(city_id){
+			}
+		});
+		cityPicker.init();
+	</script>
+</body>
+</html>
